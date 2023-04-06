@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppg5</title>
+</head>
+<body>
+    <label>Enter your name:</label><br>
+    <input type="text" id="name-el"><br>
+    <button id="name-btn" onclick="enterName()">Submit</button>
+
+    <script>
+
+        function enterName() {
+            let nameEl = document.getElementById("name-el").value;
+            console.log(nameEl);
+        }
+
+        function clean() {
+            let nameEl = document.getElementById("name-el");
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <label for="inn">Navn</label>
+  <input type="text" onchange="visNavn()" id="inn"/>
+  <button onclick="visMelding()">Klikk</button>
+  <div id="output">Klikk for å komme inn!</div>
+
+  <script type="application/javascript">
+    let output = document.getElementById("output");
+
+    function visNavn(){
+      let navnet = document.getElementById("inn").value;
+      document.getElementById("output").innerText += navnet+ "!";
+    }
+
+    function visMelding(){
+      let melding = "Hei velkommen inn ";
+      output.textContent = melding;
+    }
+
+  </script>
+</body>
+</html>
