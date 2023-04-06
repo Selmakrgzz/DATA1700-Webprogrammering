@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teller</h1>
+    <h2 id="tallOutput">0</h2>
+    <button onclick="tellerBtn()">Klikk</button>
+    <script>
+        let teller = 0;
+        function tellerBtn(){
+            teller++;
+            document.getElementById('tallOutput').innerHTML = teller;
+
+            if(teller != 0){
+            let ut = "Du har trykket på knappen: ";
+            ut+=teller+ " ganger";
+            console.log(ut);
+        }
+        }
+
+    </script>
+</body>
+</html>
