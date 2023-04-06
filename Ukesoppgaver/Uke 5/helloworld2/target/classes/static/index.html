@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Første webprogram</h1>
+    <label>Skriv navn her:</label>
+    <input type="text" id="navn">
+    <button id="sendInn">Send inn</button>
+    <div id="output"></div>
+
+    <script type="application/javascript">
+        $(function (){
+            $("#sendInn").click(function (){
+                const url = "/hello?navn=" +$("#navn").val();
+                $.get(url, function (data){
+                    $("#output").html(data);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

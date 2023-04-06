@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Title</title>
+</head>
+<body>
+  <label>Måned</label>
+  <input type="text" id="maaned">
+  <br>
+  <button id="submit">Submit</button>
+  <div id="output"></div>
+
+<script>
+  $("#submit").click(function (){
+    let maaned = $("#maaned").val();
+    let url = "temp?maaned=" +maaned;
+    $.get(url, function (data){
+      let temp = "Temperatur i " +maaned+ " er " +data+ " grader."
+      $("#output").html(temp);
+    });
+  });
+</script>
+</body>
+</html>
